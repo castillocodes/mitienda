@@ -31,20 +31,35 @@
                         <input class="form-control" type="text" name="zipcode" placeholder="Zip code...">
                     </div>
                     <div class="form-field">
-                        <input class="form-control" type="text" name="zipcode" placeholder="Zip code...">
+                        <input class="form-control" type="text" name="country" placeholder="Country...">
                     </div>
                 </div>
 
                 <hr>
-                <input type="submit" value="Continue">
+                <input id="form-button" class="btn btn-success btn-block" type="submit" value="Continue">
             </form>
         </div>
+        <br>
+        <div class="box-element hidden" id="payment-info">
+            <small>Paypal Options</small>
+        </div>
+
     </div>
 
     <div class="col-lg-6">
         <div class="box-element">
-            
-
+            <a class="btn btn-outline-dark" href="{% url 'cart' %}">&#x2190; Back to Cart</a>
+            <hr>
+            <h3>Order Summary</h3>
+            <hr>
+            <div class="cart-row">
+                <div style="flex: 2"><img class="row-image" src="{% static 'images/placeholder.png' %}"></div>
+                <div style="flex: 2"><strong>Product 1</strong></div>
+                <div style="flex: 1"><strong>$20.00</strong></div>
+                <div style="flex: 1"><strong>x2</strong></div>
+            </div>
+            <h5>Items: 2</h5>
+            <h5>Total: $4</h5>
         </div>
     </div>
 </div>
